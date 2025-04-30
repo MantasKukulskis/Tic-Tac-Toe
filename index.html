@@ -10,7 +10,12 @@
   <section class="container">
     <div class="row">
       <div class="game-name">Tic-Tac-Toe</div>
-
+      <div class="result col-5 m-4">Choose X or O to start!</div>
+      <div class="choose">
+        Choose your weapon:
+        <img class="symbol" data-symbol="X" src="./img/cross.svg" alt="Cross" />
+        <img class="symbol" data-symbol="O" src="./img/zero.svg" alt="Zero" />
+      </div>
       <div class="all-buttons m-3">
         <button class="btn"></button>
         <button class="btn"></button>
@@ -22,18 +27,12 @@
         <button class="btn"></button>
         <button class="btn"></button>
       </div>
-
-      <button id="restartBtn" class="restart-btn">Restart Game</button>
-
-      <div class="result col-5 m-4">Choose X or O to start!</div>
-
-      <div class="choose">
-        Choose your symbol:
-        <img class="symbol" data-symbol="X" src="./img/cross.svg" alt="Cross" />
-        <img class="symbol" data-symbol="O" src="./img/zero.svg" alt="Zero" />
-      </div>
+      <button id="restartBtn">Restart Game</button>
     </div>
   </section>
+
+  <audio id="click-sound" src="./audio/button-click(chosic.com).mp3"></audio>
+  <audio id="win-sound" src="./audio/victorymale-version-230553.mp3"></audio>
 
   <script src="./index.js"></script>
 </body>

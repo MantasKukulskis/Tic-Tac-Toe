@@ -3,6 +3,9 @@ const resultEl = document.querySelector(".result");
 const restartBtn = document.getElementById("restartBtn");
 const symbolImgs = document.querySelectorAll(".symbol");
 
+const clickSound = document.getElementById("click-sound");
+const winSound = document.getElementById("win-sound");
+
 let currentPlayer = "X";
 let playerSymbol = null;
 let board = Array(9).fill(null);
@@ -14,19 +17,12 @@ const winningCombinations = [
   [0,4,8], [2,4,6]
 ];
 
-function setSymbol(btn, symbol) {
-  const img = document.createElement("img");
-  img.src = symbol === "X" ? "./img/cross.svg" : "./img/zero.svg";
-  img.alt = symbol;
-  img.classList.add("symbol-img");
-  btn.appendChild(img);
-}
-
 function startGame() {
   board = Array(9).fill(null);
   buttons.forEach(btn => {
-    btn.innerHTML = "";
+    btn.textContent = "";
     btn.disabled = false;
+    btn.innerHTML = "";
   });
   resultEl.textContent = "Game in progress...";
   currentPlayer = playerSymbol;
@@ -37,6 +33,8 @@ function checkWinner() {
   for (const [a, b, c] of winningCombinations) {
     if (board[a] && board[a] === board[b] && board[a] === board[c]) {
       resultEl.textContent = `${board[a]} wins!`;
+      winSound.currentTime = 0;
+      winSound.play();
       gameActive = false;
       disableBoard();
       return;
@@ -58,10 +56,16 @@ buttons.forEach((btn, index) => {
     if (!gameActive || board[index]) return;
 
     board[index] = currentPlayer;
-    setSymbol(btn, currentPlayer);
+    clickSound.currentTime = 0;
+    clickSound.play();
+
+    const img = document.createElement("img");
+    img.src = currentPlayer === "X" ? "./img/cross.svg" : "./img/zero.svg";
+    img.classList.add("symbol-img");
+    btn.appendChild(img);
+    btn.disabled = true;
 
     checkWinner();
-
     currentPlayer = currentPlayer === "X" ? "O" : "X";
   });
 });
