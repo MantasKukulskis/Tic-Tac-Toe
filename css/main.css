@@ -5,31 +5,29 @@ body * {
   box-sizing: border-box;
 }
 
-/* Centravimo pagrindas */
 body {
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   background-color: #0f4e63;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh; /* Pilnas aukštis */
+  height: 100vh; 
 }
 
-/* Pagrindinis konteineris */
+
 .container {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-/* Žaidimo pavadinimas */
 .game-name {
   color: white;
   font-size: 3rem;
   margin-bottom: 2rem;
 }
 
-/* Mygtukų dėžė */
+
 .all-buttons {
   display: flex;
   flex-wrap: wrap;
@@ -38,7 +36,6 @@ body {
   margin-bottom: 1rem;
 }
 
-/* Vienas žaidimo langelio mygtukas */
 .btn {
   display: flex;
   justify-content: center;
@@ -49,7 +46,6 @@ body {
   border: solid 2px white;
 }
 
-/* Simbolių paveikslėliai */
 .symbol-img {
   width: 70%;
   height: 70%;
@@ -57,7 +53,6 @@ body {
   pointer-events: none;
 }
 
-/* Pasirinkimo dalis */
 .choose {
   display: flex;
   justify-content: center;
@@ -67,7 +62,6 @@ body {
   gap: 1rem;
 }
 
-/* Rezultato tekstas */
 .result {
   color: white;
   margin-top: 2rem;

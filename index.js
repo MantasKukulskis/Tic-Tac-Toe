@@ -14,7 +14,6 @@ const winningCombinations = [
   [0,4,8], [2,4,6]
 ];
 
-// ✅ Funkcija įdedanti SVG ikoną vietoj teksto
 function setSymbol(btn, symbol) {
   const img = document.createElement("img");
   img.src = symbol === "X" ? "./img/cross.svg" : "./img/zero.svg";
@@ -26,7 +25,7 @@ function setSymbol(btn, symbol) {
 function startGame() {
   board = Array(9).fill(null);
   buttons.forEach(btn => {
-    btn.innerHTML = ""; // ❗ Naudojam innerHTML, kad pašalintų ir SVG
+    btn.innerHTML = "";
     btn.disabled = false;
   });
   resultEl.textContent = "Game in progress...";
