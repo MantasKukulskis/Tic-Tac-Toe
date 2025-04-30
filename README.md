@@ -4,10 +4,11 @@
 
 Tic Tac Toe is a simple browser-based game built with HTML, CSS, and JavaScript. Two players take turns placing Xs and Os on a 3×3 grid, aiming to get three in a row—horizontally, vertically, or diagonally.
 
-Live site: Add your deployment link here
+Live site: https://mantaskukulskis.github.io/Tic-Tac-Toe
 
 Design: Custom design and logic by the developer.
-🎮 How to Play
+
+## 🎮 How to Play
 
     The game board appears with an empty 3x3 grid.
 
@@ -53,7 +54,7 @@ No special tools required—only a modern web browser.
 
 To run the game locally:
 
-git clone https://github.com/YourUsername/TicTacToe.git
+git clone https://github.com/MantasKukulskis/Tic-Tac-Toe.git
 cd TicTacToe
 
 If you are using a development server:
@@ -69,7 +70,7 @@ This project does not include automated tests at this time.
 
 ## 👨‍💻 Author
 
-Your Name: GitHub
+[Your Name: GitHub](https://github.com/MantasKukulskis)
 
 ## ⚠️ License
 
